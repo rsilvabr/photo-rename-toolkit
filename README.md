@@ -6,7 +6,9 @@ PowerShell/BAT scripts to batch-rename photos in chronological order while keepi
 
 ## The problem
 
-When photo folders get split mid-sequence (backup restores, multiple memory cards, merging exports), you end up with clashing camera filenames (`DSC_0001` in two different folders meaning two different photos). Merging them requires renaming everything into one clean chronological sequence — without separating a RAW file from its JPEG and its XMP sidecar.
+When photo folders get split mid-sequence (usually happens when the camera auto-reset the counter after reaching 9999 mid-shooting), you end up with clashing camera filenames (`DSC_0001` in two different folders meaning two different photos). 
+Also, you end up with DSC9999 being OLDER than DSC0001, so its a mess.
+Merging them requires renaming everything into one clean chronological sequence — without separating a RAW file from its JPEG and its XMP sidecar.
 
 ## The scripts
 
