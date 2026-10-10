@@ -27,8 +27,10 @@
 #
 # Variáveis internas (edite no topo do script se necessário):
 #   $adobeRGB_autoname se $true, arquivos que começam com "_" mantêm o "_"
-#                      no novo nome (convenção AdobeRGB do Capture One:
-#                      _DSC_0001.jpg = versão AdobeRGB do mesmo disparo)
+#                      no novo nome. O "_" vem da própria câmera: pelo
+#                      padrão DCF, uma foto feita em AdobeRGB tem "_" como
+#                      primeiro caractere (Nikon _DSC0001, Canon _MG_0001,
+#                      Fujifilm _DSF0001)
 #
 # O que o script faz:
 #   - Coleta JPG, NEF, RAF e XMP da pasta (não recursivo)
@@ -71,7 +73,7 @@ param(
 $adobeRGB_autoname = $true
 # Se $true: arquivos com nome começando em "_" (ex: _DSC_0007.jpg)
 # recebem "_" no novo nome também (_DSC_0001.jpg).
-# Isso preserva a convenção do Capture One onde _ indica AdobeRGB.
+# Isso preserva a marca de AdobeRGB que a câmera põe no nome (padrão DCF).
 # ──────────────────────────────────────────────────────────────────
 
 

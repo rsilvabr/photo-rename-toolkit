@@ -25,7 +25,7 @@ Does the actual renaming:
 - Groups files by base name — `DSC_0007.nef` + `DSC_0007.jpg` + `DSC_0007.xmp` stay together under the same new number
 - Sorts groups by modification date, so the new sequence follows real shooting order
 - Renames sequentially (`DSC_0001`, `DSC_0002`, ...) and **moves results to a `renamed/` subfolder** (never renames in place)
-- Preserves the leading `_` used by Capture One for AdobeRGB exports (`_DSC_0007.jpg` → `_DSC_0042.jpg`)
+- Preserves the leading `_` that marks an AdobeRGB shot (`_DSC_0007.jpg` → `_DSC_0042.jpg`). The camera itself writes it: under the DCF standard, a file shot in AdobeRGB starts with `_` (Nikon `_DSC0007`, Canon `_MG_0007`, Fujifilm `_DSF0007`)
 - Skips groups that contain only XMPs (no real photo)
 - Always runs a dry-run first, then requires `y` + today's date to execute for real
 - Writes a full log to `moveLog.txt`
